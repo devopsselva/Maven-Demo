@@ -12,8 +12,9 @@ pipeline{
            }
        }
        stage ("deploy"){
-          steps {sh 'cp -rp "C:\\Program Files (x86)\\Jenkins\\workspace\\pipeline declare\\multi-module\\webapp\\target\\webapp.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"'
-       }
+          steps {bat '''xcopy /y "C:\\Program Files (x86)\\Jenkins\\workspace\\pipe declare\\multi-module\\webapp\\target\\webapp.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"
+'''
+}
      }
  }
 }
